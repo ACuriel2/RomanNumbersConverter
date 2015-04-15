@@ -13,5 +13,11 @@ public class KataTesting {
 		Converter romanizer = new Converter();
 		assertEquals("", romanizer.getRoman(0));		
 	}
+	
+	@Test
+	public void givenOne_Return_I(){
+		Converter romanizer = new Converter();
+		assertEquals("I", romanizer.getRoman(1));
+	}
 
 }
