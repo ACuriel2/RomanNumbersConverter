@@ -29,5 +29,10 @@ public class KataTesting {
 	public void givenFive_Return_V(){
 		assertEquals("V", romanizer.getRoman(5));		
 	}
+	
+	@Test
+	public void givenTwo_ReturnII(){
+		assertEquals("II", romanizer.getRoman(2));
+	}
 
 }
