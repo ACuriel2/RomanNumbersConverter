@@ -1,9 +1,8 @@
 package com.curiel.kata.romannumbersconverter.testing;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 
 import com.curiel.kata.romannumbersconverter.project.Converter;
