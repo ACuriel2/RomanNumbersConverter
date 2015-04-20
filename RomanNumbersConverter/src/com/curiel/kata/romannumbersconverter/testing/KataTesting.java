@@ -34,5 +34,4 @@ public class KataTesting {
 	public void givenTwo_ReturnII(){
 		assertEquals("II", romanizer.getRoman(2));
 	}
-
 }
