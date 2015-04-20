@@ -3,6 +3,7 @@ package com.curiel.kata.romannumbersconverter.testing;
 import static org.junit.Assert.*;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import com.curiel.kata.romannumbersconverter.project.Converter;
@@ -53,5 +54,20 @@ public class KataTesting {
 	@Test 
 	public void givenNine_ReturnIX(){
 		assertEquals("IX", romanizer.getRoman(9));
+	}
+	
+	@Test 
+	public void givenNineteen_ReturnXIX(){
+		assertEquals("XIX", romanizer.getRoman(19));
+	}
+	
+	@Test 
+	public void givenTwentynine_ReturnXXIX(){
+		assertEquals("XXIX", romanizer.getRoman(29));
+	}
+	
+	@Test 
+	public void givenForty_ReturnXL(){
+		assertEquals("XL", romanizer.getRoman(40));
 	}
 }

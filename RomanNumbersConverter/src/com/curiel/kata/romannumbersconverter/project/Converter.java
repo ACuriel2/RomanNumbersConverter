@@ -1,38 +1,35 @@
 package com.curiel.kata.romannumbersconverter.project;
 
-import java.util.Hashtable;
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class Converter {
-	private Hashtable<Integer, String> equivalences;
+	private List<Equivalence> equivalences;
 
 	public Converter() {
-		equivalences = new Hashtable<Integer, String>();
-		equivalences.put(1, "I");
-		equivalences.put(4, "IV");
-		equivalences.put(5, "V");
-		equivalences.put(9, "IX");
-		equivalences.put(10, "X");
-		
+		equivalences = new ArrayList<Equivalence>(Arrays.asList(
+				new Equivalence(1000,"M"),
+				new Equivalence(500,"D"),
+				new Equivalence(100,"C"),
+				new Equivalence(50,"L"),
+				new Equivalence(40,"XL"),
+				new Equivalence(10,"X"),
+				new Equivalence(9,"IX"),
+				new Equivalence(5,"V"),
+				new Equivalence(4,"IV"),
+				new Equivalence(1,"I")
+				));
 	}
 
 	public String getRoman(int arabicNumber) {
 		if (arabicNumber == 0)
 			return "";
-		for (Map.Entry equivalence : equivalences.entrySet())
-			if (arabicNumber >= arabicNumber(equivalence))
-				return romanNumber(equivalence)
-						+ getRoman(arabicNumber
-								- arabicNumber(equivalence));
+		for (Equivalence eq : equivalences){
+			if(arabicNumber >= eq.getArabicNumber())
+				return eq.getRomanNumber() + getRoman(arabicNumber - eq.getArabicNumber());
+		}
+		
 		return "";
 	}
-
-	private String romanNumber(Map.Entry equivalence) {
-		return (String) equivalence.getValue();
-	}
-
-	private Integer arabicNumber(Map.Entry equivalence) {
-		return (Integer) equivalence.getKey();
-	}
-
 }
