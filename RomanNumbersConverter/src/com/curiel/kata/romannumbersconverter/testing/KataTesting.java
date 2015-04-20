@@ -34,4 +34,9 @@ public class KataTesting {
 	public void givenTwo_ReturnII(){
 		assertEquals("II", romanizer.getRoman(2));
 	}
+	
+	@Test 
+	public void givenFour_ReturnIV(){
+		assertEquals("IV", romanizer.getRoman(4));
+	}
 }
