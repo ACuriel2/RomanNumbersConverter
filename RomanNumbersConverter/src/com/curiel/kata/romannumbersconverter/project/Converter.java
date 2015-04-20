@@ -25,11 +25,9 @@ public class Converter {
 	public String getRoman(int arabicNumber) {
 		if (arabicNumber == 0)
 			return "";
-		for (Equivalence eq : equivalences){
+		for (Equivalence eq : equivalences)
 			if(arabicNumber >= eq.getArabicNumber())
-				return eq.getRomanNumber() + getRoman(arabicNumber - eq.getArabicNumber());
-		}
-		
+				return eq.getRomanNumber() + getRoman(arabicNumber - eq.getArabicNumber());		
 		return "";
 	}
 }
