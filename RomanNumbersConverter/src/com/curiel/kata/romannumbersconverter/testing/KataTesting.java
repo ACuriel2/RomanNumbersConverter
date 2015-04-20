@@ -76,4 +76,8 @@ public class KataTesting {
 		assertEquals("XLIX", romanizer.getRoman(49));
 	}
 	
+	@Test 
+	public void givenNinety_ReturnXC(){
+		assertEquals("XC", romanizer.getRoman(90));
+	}	
 }
