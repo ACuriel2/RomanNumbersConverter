@@ -12,6 +12,7 @@ public class Converter {
 				new Equivalence(1000,"M"),
 				new Equivalence(500,"D"),
 				new Equivalence(100,"C"),
+				new Equivalence(90, "XC"),
 				new Equivalence(50,"L"),
 				new Equivalence(40,"XL"),
 				new Equivalence(10,"X"),
