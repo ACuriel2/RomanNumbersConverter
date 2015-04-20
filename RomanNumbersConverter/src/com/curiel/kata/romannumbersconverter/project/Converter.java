@@ -11,9 +11,8 @@ public class Converter {
 		case 5:
 			return "V";		
 		default:
-			break;
+			return "I" + getRoman(arabicNumber - 1);
 		}
-		return "";
 	}
 
 }
