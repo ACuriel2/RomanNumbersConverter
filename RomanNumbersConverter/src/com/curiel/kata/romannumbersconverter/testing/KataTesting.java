@@ -49,4 +49,9 @@ public class KataTesting {
 	public void givenTen_ReturnX(){
 		assertEquals("X", romanizer.getRoman(10));
 	}
+	
+	@Test 
+	public void givenNine_ReturnIX(){
+		assertEquals("IX", romanizer.getRoman(9));
+	}
 }

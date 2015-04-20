@@ -10,8 +10,9 @@ public class Converter {
 		equivalences = new Hashtable<Integer, String>();
 		equivalences.put(1, "I");
 		equivalences.put(4, "IV");
-		equivalences.put(5, "V");
+		equivalences.put(5, "V");		
 		equivalences.put(10, "X");
+		
 	}
 
 	public String getRoman(int arabicNumber) {
