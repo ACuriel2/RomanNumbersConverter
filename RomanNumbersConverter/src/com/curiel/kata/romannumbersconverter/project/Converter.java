@@ -17,11 +17,19 @@ public class Converter {
 		if (arabicNumber == 0)
 			return "";
 		for (Map.Entry equivalence : equivalences.entrySet())
-			if (arabicNumber >= (Integer) equivalence.getKey())
-				return (String) equivalence.getValue()
+			if (arabicNumber >= arabicNumber(equivalence))
+				return romanNumber(equivalence)
 						+ getRoman(arabicNumber
-								- (Integer) equivalence.getKey());
+								- arabicNumber(equivalence));
 		return "";
+	}
+
+	private String romanNumber(Map.Entry equivalence) {
+		return (String) equivalence.getValue();
+	}
+
+	private Integer arabicNumber(Map.Entry equivalence) {
+		return (Integer) equivalence.getKey();
 	}
 
 }
