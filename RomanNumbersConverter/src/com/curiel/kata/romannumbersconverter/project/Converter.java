@@ -9,7 +9,8 @@ public class Converter {
 
 	public Converter() {
 		equivalences = new ArrayList<Equivalence>(Arrays.asList(
-				new Equivalence(1000,"M"),				
+				new Equivalence(1000,"M"),
+				new Equivalence(900, "CM"),
 				new Equivalence(500,"D"),
 				new Equivalence(400, "CD"),
 				new Equivalence(100,"C"),
