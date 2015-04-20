@@ -9,6 +9,7 @@ public class Converter {
 	public Converter() {
 		equivalences = new Hashtable<Integer, String>();
 		equivalences.put(1, "I");
+		equivalences.put(4, "IV");
 		equivalences.put(5, "V");
 	}
 
