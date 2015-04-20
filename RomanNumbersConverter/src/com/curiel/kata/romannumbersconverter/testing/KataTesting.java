@@ -100,4 +100,11 @@ public class KataTesting {
 	public void givenNinehundred_ReturnCM(){
 		assertEquals("CM", romanizer.getRoman(900));
 	}
+	
+	@Test 
+	public void givenArabicNumber_ReturnRomanNumber(){
+		assertEquals("CXCIX", romanizer.getRoman(199));
+		assertEquals("CCXLV", romanizer.getRoman(245));
+		assertEquals("CMXCIX", romanizer.getRoman(999));
+	}
 }
