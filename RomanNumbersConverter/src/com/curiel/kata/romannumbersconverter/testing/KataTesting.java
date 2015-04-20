@@ -95,4 +95,9 @@ public class KataTesting {
 	public void givenFourHundred_ReturnCD(){
 		assertEquals("CD", romanizer.getRoman(400));
 	}
+	
+	@Test 
+	public void givenNinehundred_ReturnCM(){
+		assertEquals("CM", romanizer.getRoman(900));
+	}
 }
