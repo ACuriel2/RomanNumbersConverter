@@ -70,4 +70,10 @@ public class KataTesting {
 	public void givenForty_ReturnXL(){
 		assertEquals("XL", romanizer.getRoman(40));
 	}
+	
+	@Test 
+	public void givenFortynine_ReturnXLIX(){
+		assertEquals("XLIX", romanizer.getRoman(49));
+	}
+	
 }
